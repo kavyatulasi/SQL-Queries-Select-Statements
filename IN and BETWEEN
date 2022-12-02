@@ -1,0 +1,24 @@
+create table temp_emp(
+    id int primary key,
+    fname varchar(10) not null,
+    lname varchar2(10) not null,
+    sal integer ,
+    deptid numeric,
+    hiredate date
+);
+
+
+insert into temp_emp values(1,'kavya','madicharla',40000,5,'01-aug-2019');
+insert into temp_emp values(2,'sabiya','shaik',35000,5,'01-jun-2018');
+insert into temp_emp values(3,'taruna','mangina',39000,5,'15-june-2019');
+insert into temp_emp values(4,'surya','chowdary',25000,3,'15-aug-2016');
+insert into temp_emp values(5,'farookh','syed',50000,5,'20-jun-2017');
+
+
+---IN---
+select * from temp_emp
+where lname  in ('madicharla','syed');
+
+--BETWEEN--
+select * from temp_emp
+where temp_emp.hiredate between '01-jan-2019' and '31-dec-2019' ;
