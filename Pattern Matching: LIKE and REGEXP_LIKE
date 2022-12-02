@@ -1,0 +1,17 @@
+---LIKE---
+
+select * from p_emp where fname like '%s%';
+
+select fname,lname,sal
+from p_emp
+where p_emp.fname like '%h';
+
+select fname,lname,sal
+from p_emp 
+where fname like '%av%_' and lname='m%';
+
+----REGEXP_LIKE----
+
+select fname from p_emp
+where regexp_like(fname,'S')
+order by fname;
