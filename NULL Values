@@ -1,0 +1,2 @@
+select sno,name,branch from stud
+where mobile is null ;
